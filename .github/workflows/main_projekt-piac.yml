@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'Projekt-PIAC'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A1F3D2E863644144AA7AB95142628966 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_76B2745A718F4C9189E13C4E31772F06 }}
