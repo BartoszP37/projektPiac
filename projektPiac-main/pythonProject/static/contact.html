@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>contact</title>
+    <link rel="icon" type="image/x-icon" href="/static/circle.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href=static/style.css  >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<p><a href="#">bartosz.poreba77@gmail.com</a></p>
+
+
+<form action="{{ url_for('send_message') }}" method="POST">
+  <label for="nick">Nick:</label>
+  <input type="text" id="nick" name="nick"><br><br>
+
+  <label for="email">E-mail:</label>
+  <input type="email" id="email" name="email"><br><br>
+
+  <label for="message">Wiadomość:</label><br>
+  <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+  <input type="submit" value="Wyślij">
+</form>
+
+<br>
+
+
+<div class="container-fluid">
+  <ul class="pagination justify-content-center">
+<li class="page-item"><a class="page-link" href="{{ url_for('gallery') }}">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="{{ url_for('index') }}">1</a></li>
+    <li class="page-item"><a class="page-link" href="{{ url_for('gallery') }}">2</a></li>
+    <li class="page-item"><a class="page-link" href="{{ url_for('contact') }}">3</a></li>
+    <li class="page-item"><a class="page-link" href="{{ url_for('about') }}">4</a></li>
+    <li class="page-item"><a class="page-link" href="{{ url_for('about') }}">Next</a></li>
+  </ul>
+</div>
+
+
+</body>
+</html>

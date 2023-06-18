@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.4em;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: 0;
+    }
+
+.button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+}
+
+.pagination .page-link:hover {
+  background-color: #ddd;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: red;
+  color: black;
+  border-color: red;
+}
+
+    
+.navbar {
+  background-color: #3f3f3f;
+}
+
+.navbar .nav-link {
+  color: #000000;
+}
+
+.navbar .nav-link.active {
+  color: #ffffff;
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+    
+.navbar-nav .nav-item {
+  margin-right: 10px; 
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+  
+form {
+  border: 1px solid gray;
+  padding: 20px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+label, input, textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+textarea {
+  height: 100px;
+}
+
+/* Styl dla wiadomości */
+.message {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message .meta {
+  font-style: italic;
+  color: #888;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid #000; 
+  border-radius: 4px; 
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button[type="submit"]:focus {
+  outline: none;
+}

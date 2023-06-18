@@ -1,0 +1,5 @@
+AZDBSERVER= 'projektpiacdb.database.windows.net'
+AZDBNAME='ProjektPIACDB'
+AZDBUSER='wrx76000@student.wsb.wroclaw.pl'
+AZDBPW='password'
+AZDBDRIVER='{ODBC Driver 17 for SQL Server}'
