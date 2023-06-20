@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moje Ulubione Piosenki</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#songForm').submit(function(event) {
+                event.preventDefault();
+                var songId = $('#songId').val();
+                $.get('/songs/' + songId, function(data) {
+                    var songInfo = 'Wykonawca: ' + data.artist + ', Tytuł: ' + data.title + ', Format: ' + data.file_format;
+                    $('#songInfo').text(songInfo);
+                }).fail(function() {
+                    $('#songInfo').text('Piosenka nie znaleziona');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Moje Ulubione Piosenki</h1>
+    <form id="songForm">
+        <label for="songId">ID Piosenki:</label>
+        <input type="text" id="songId" name="songId">
+        <button type="submit">Pobierz informacje</button>
+    </form>
+    <div id="songInfo"></div>
+
+    <script>
+        // Dodatkowy kod JavaScript, który pobierze wszystkie piosenki przy załadowaniu strony
+        $(document).ready(function() {
+            $.get('/songs', function(data) {
+                var songsList = '';
+                $.each(data, function(index, song) {
+                    songsList += 'ID: ' + song.id + ', Wykonawca: ' + song.artist + ', Tytuł: ' + song.title + '<br>';
+                });
+                $('#songsList').html(songsList);
+            });
+        });
+    </script>
+    
+    <div id="songsList"></div>
+</body>
+</html>
